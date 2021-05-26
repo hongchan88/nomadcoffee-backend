@@ -7,7 +7,7 @@ import { makeExecutableSchema } from "apollo-server-express";
 const loadedTypes = loadFilesSync(`${__dirname}/**/*.typeDefs.js`);
 const typeDefs = mergeTypeDefs(loadedTypes);
 
-const loadedResolvers = loadFilesSync(`${__dirname}/**/*.resolvers.js`)
+const loadedResolvers = loadFilesSync(`${__dirname}/**/*.{queries,mutations}.js`)
 const resolvers = mergeResolvers(loadedResolvers);
 
 const schema = makeExecutableSchema({typeDefs , resolvers});
