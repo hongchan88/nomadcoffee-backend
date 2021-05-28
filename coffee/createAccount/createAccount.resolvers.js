@@ -1,6 +1,7 @@
 
-import client from "../client";
+import client from "../../client";
 import bcrypt from "bcrypt";
+
 
 export default {
   Mutation: {
@@ -35,13 +36,12 @@ export default {
        
         // hash password
         const uglyPassword = await bcrypt.hash(password, 10);
-
         return client.user.create({data: {
           username,
           email,
           name,
           location,
-      
+         
           password:uglyPassword,
   
         },
@@ -53,5 +53,6 @@ export default {
       // save and return the user
  
     },
+    
   },
 };
