@@ -16,7 +16,7 @@ type Mutation{
     name: String
     location:String
     password: String
-    avatarURL: String
+    avatarURL: Upload
 
     githubUsername: String) : EditProfileResult!
 

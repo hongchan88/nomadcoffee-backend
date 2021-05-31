@@ -12,6 +12,14 @@ type User {
   githubUsername: String
   createdAt: String!
   updatedAt: String!
+  following: [User]
+  followers: [User]
+  totalFollowing: Int!
+  totalFollowers: Int!
+  isMe: Boolean!
+  isFollowing: Boolean!
+
+  
 
 
 }
